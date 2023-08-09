@@ -1,0 +1,13 @@
+.background {
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(
+      rgba(246, 242, 242, 0.95),
+      rgba(67, 63, 63, 0.7)
+    ),
+    url('./PngItem_4839785.png');
+  /* background-position: 20rem; */
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-attachment: fixed;
+}
