@@ -3,6 +3,10 @@ import axios from 'axios';
 import './PokemonList.css';
 import Pokemon from '../Pokemon/Pokemon.jsx';
 
+function capitalizeFirstLetter(str) {
+  return str.charAt(0).toUpperCase() + str.slice(1);
+}
+
 function PokemonList() {
   const [PokemonList, setPokemonList] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -53,7 +57,12 @@ function PokemonList() {
         {isLoading
           ? 'Loading...'
           : PokemonList.map((p) => (
-              <Pokemon name={p.name} image={p.image} key={p.id} id={p.id} />
+              <Pokemon
+                name={capitalizeFirstLetter(p.name)}
+                image={p.image}
+                key={p.id}
+                id={p.id}
+              />
             ))}
       </div>
       <div className='controls'>
