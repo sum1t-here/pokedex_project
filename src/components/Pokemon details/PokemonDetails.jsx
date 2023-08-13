@@ -5,11 +5,11 @@ import './PokemonDetails.css';
 import usePokemonList from '../../hooks/usePokemonList.js';
 import usePokemonDetails from '../../hooks/usePokemonDetails.js';
 
-function PokemonDetails() {
+function PokemonDetails({ pokemonName }) {
   const { id } = useParams();
   console.log(`${id}`);
 
-  const [pokemon] = usePokemonDetails(id);
+  const [pokemon] = usePokemonDetails(id, pokemonName);
   // const [pokemon, setPokemon] = useState({});
   // const [isLoading, setIsLoading] = useState(true);
   // let pokemonListHookResponse = [];

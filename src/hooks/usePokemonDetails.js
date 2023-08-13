@@ -7,9 +7,13 @@ function usePokemonDetails(id, pokemonName) {
     try {
       let response;
       if (pokemonName) {
-        response = await axios.get(
-          `https://pokeapi.co/api/v2/pokemon/${pokemonName}`
-        );
+        try {
+          response = await axios.get(
+            `https://pokeapi.co/api/v2/pokemon/${pokemonName}`
+          );
+        } catch (error) {
+          console.log('the err', error);
+        }
       } else {
         response = await axios.get(`https://pokeapi.co/api/v2/pokemon/${id}`);
       }

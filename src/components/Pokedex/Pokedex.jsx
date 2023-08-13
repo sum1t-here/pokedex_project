@@ -10,6 +10,7 @@ import PokemonDetails from '../Pokemon details/PokemonDetails.jsx';
 function Pokedex() {
   const [searchTerm, setSearchTerm] = useState('');
 
+  console.log('Current Search Term:', searchTerm);
   return (
     <div className='pokedex-wrapper'>
       {/* <Background> */}
