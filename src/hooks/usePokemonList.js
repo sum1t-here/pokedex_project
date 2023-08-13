@@ -76,7 +76,7 @@ function usePokemonList(type) {
 
   useEffect(() => {
     downloadPokemons();
-  }, [/*pokedexUrl*/ pokemonListState.pokedexUrl]);
+  }, [pokemonListState.pokedexUrl]); /*pokedexUrl*/
 
   return [pokemonListState, setPokemonListState];
 }
